@@ -23,17 +23,6 @@ class MazeTree:
         x,y = tup
         return Node(self, x, y)
 
-    def constructPath(self, tup):
-        path = [tup]
-        x,y = tup
-        while self[x,y].precedent:
-            print('x:{0}y:{1}'.format(x,y))
-            path.append(self[x,y].precedent)
-            x,y = self[x,y].precedent
-        path.reverse()
-        return path
-            
-
 
 class Node:
         
